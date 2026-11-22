@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080b14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="TECH PULSE">
+<meta name="description" content="Technik-News zu Apple, KI, 3D-Druck, Programmierung, Computer, Robotik und Mercedes.">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="icon" href="./icon.svg" type="image/svg+xml">
+<title>TECH PULSE</title>
+<style>
+:root{color-scheme:dark;--bg:#080b14;--panel:#111a2b;--line:#ffffff16;--text:#f4f7ff;--muted:#9aa8be;--blue:#8eb8ff;--cyan:#75e8ed}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 85% 10%,#29204c 0,transparent 32%),radial-gradient(ellipse at 0 25%,#10294b 0,transparent 35%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh}
+header{height:68px;position:sticky;top:0;z-index:4;display:flex;align-items:center;justify-content:space-between;padding:0 17px;background:#080b14eF;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px}.logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,#4f8cff,#956cff);display:grid;place-items:center;font-weight:900;letter-spacing:-2px}.brand b{display:block;font-size:13px;letter-spacing:2px}.brand small{display:block;color:var(--muted);font-size:8px;letter-spacing:1.4px;margin-top:4px}
+button,select,input{font:inherit}.btn{border:1px solid var(--line);background:#172238;color:var(--text);border-radius:12px;padding:10px 13px;font-size:12px;font-weight:700}.wrap{width:min(920px,calc(100% - 30px));margin:auto}
+.hero{margin:20px 0 24px;padding:27px 23px;border:1px solid #80aaff35;border-radius:24px;background:linear-gradient(120deg,#142440,#151a30 65%,#2a1d45);overflow:hidden;position:relative}
+.kicker{font-size:10px;letter-spacing:2px;color:#a9c8ff;font-weight:800}.hero h1{font-size:clamp(38px,10vw,58px);line-height:.98;letter-spacing:-2.5px;margin:18px 0 12px}.hero h1 span{background:linear-gradient(90deg,#82baff,#b69aff,#77e6e9);background-clip:text;color:transparent}.hero p{font-size:13px;line-height:1.6;color:#c1cce0;max-width:390px;margin:0}.stamp{font-size:10px;color:#91a2bc;margin-top:19px}
+.weekly{padding:18px;border:1px solid var(--line);border-radius:17px;background:#111a2bd9;display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:31px}.weekly h2,.section h2{font-size:20px;margin:6px 0}.weekly p{margin:0;color:var(--muted);font-size:11px;line-height:1.5}.section{display:flex;align-items:end;justify-content:space-between;margin-bottom:13px}.count{font-size:10px;color:var(--muted)}
+nav{display:flex;gap:7px;overflow:auto;padding:0 0 14px;scrollbar-width:none}nav::-webkit-scrollbar{display:none}.pill{white-space:nowrap;border:1px solid var(--line);border-radius:30px;padding:9px 12px;background:#111a2b;color:#b5c2d7;font-size:11px}.pill.active{background:#284775;border-color:#78aaff88;color:white}
+.tools{display:flex;gap:8px;margin-bottom:15px}.search{flex:1;min-width:0;border:1px solid var(--line);border-radius:12px;background:#111a2b;padding:0 12px;display:flex;align-items:center;gap:8px}.search input{width:100%;height:42px;background:transparent;border:0;outline:0;color:white;font-size:12px}.tools select{max-width:125px;background:#111a2b;color:#dce5f4;border:1px solid var(--line);border-radius:12px;padding:0 8px;font-size:11px}
+.notice{border:1px solid #876b32;background:#352b19;color:#f2d9a7;padding:12px;border-radius:12px;font-size:11px;line-height:1.5;margin-bottom:13px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card{padding:16px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(145deg,#131e30,#0f1522);min-width:0;display:flex;flex-direction:column;min-height:175px}.cardtop,.cardbottom{display:flex;align-items:center;justify-content:space-between;gap:8px}.tag{font-size:9px;color:#b8d0ff;background:#253b5e;padding:6px 8px;border-radius:20px}.date,.source{font-size:9px;color:#8392aa}.card h3{font-size:14px;line-height:1.4;margin:13px 0 8px}.summary{font-size:11px;line-height:1.5;color:#a6b2c6;margin:0 0 14px}.cardbottom{margin-top:auto}.source{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.link{color:#a9caff;text-decoration:none;font-size:10px;font-weight:700;white-space:nowrap}.status{text-align:center;color:var(--muted);font-size:12px;padding:35px 12px}.hidden{display:none!important}
+footer{margin:50px 0 30px;padding:20px 0;border-top:1px solid var(--line);color:#75839a;font-size:10px;line-height:1.6}.footbrand{font-weight:900;letter-spacing:2px;color:#cbd9ef}
+@media(max-width:650px){.cards{grid-template-columns:1fr}.weekly{align-items:flex-start}.weekly .btn{white-space:nowrap}.card{min-height:155px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">T•P</div><div><b>TECH PULSE</b><small>DEIN TECHNIK-NEWS-CENTER</small></div></div><button id="refresh" class="btn" aria-label="Aktualisieren">↻ Aktualisieren</button></header>
+<main class="wrap">
+<section class="hero"><div class="kicker">● DEIN TECH-UPDATE</div><h1>Technik, die<br><span>morgen bewegt.</span></h1><p>Die spannendsten Entwicklungen aus der Tech-Welt – kompakt, verständlich und an einem Ort.</p><div id="updated" class="stamp">Nachrichten werden geladen …</div></section>
+<section class="weekly"><div><div class="kicker">DER WOCHENBLICK</div><h2>Was ist neu?</h2><p>Aktuelle Meldungen aus den vergangenen Tagen.</p></div><button id="topnews" class="btn">Alle News ↗</button></section>
+<div class="section"><div><div class="kicker">ENTDECKEN</div><h2>News-Feed</h2></div><span id="count" class="count">0 Meldungen</span></div>
+<nav id="categories" aria-label="Kategorien"></nav>
+<div class="tools"><label class="search">⌕ <input id="search" type="search" placeholder="Nachrichten durchsuchen …"></label><select id="sort"><option value="new">Neueste zuerst</option><option value="old">Älteste zuerst</option></select></div>
+<div id="notice" class="notice hidden"></div><section id="cards" class="cards"><div class="status">Lade aktuelle Nachrichten …</div></section>
+<div id="empty" class="status hidden">Keine passenden Nachrichten gefunden. Versuche eine andere Kategorie oder Suche.</div>
+<footer><div class="footbrand">TECH PULSE ●</div><p>Die App sammelt RSS-Nachrichten über einen öffentlichen RSS-Konvertierungsdienst. Artikel und deren Inhalte stammen von den verlinkten Verlagen. Prüfe wichtige Meldungen immer in der Originalquelle. Die Verfügbarkeit des kostenlosen Abrufdienstes kann begrenzt sein.</p><p>TECH PULSE · Deine Neugier. Dein Update.</p></footer>
+</main>
+<script>
+const cats=[
+{id:"all",name:"Alle News",emoji:"✦",terms:[]},
+{id:"apple",name:"Apple",emoji:"🍎",terms:["apple","iphone","ipad","mac","ios","watchos","vision pro"]},
+{id:"ki",name:"KI",emoji:"🤖",terms:["ki","künstliche intelligenz","artificial intelligence","openai","chatgpt","gemini","claude","llm","ai-model"]},
+{id:"druck",name:"3D-Druck",emoji:"🖨️",terms:["3d-druck","3d druck","3d printer","bambu","prusa","formnext","additive manufacturing"]},
+{id:"coding",name:"Programmierung",emoji:"👨‍💻",terms:["programmierung","programming","software","coding","developer","entwickler","github","javascript","python"]},
+{id:"computer",name:"Computer",emoji:"💻",terms:["computer","windows","laptop","prozessor","grafikkarte","nvidia","amd","intel","pc"]},
+{id:"robotik",name:"Robotik",emoji:"🦾",terms:["robot","robotik","humanoid","robotics","roboter"]},
+{id:"mercedes",name:"Mercedes",emoji:"🚘",terms:["mercedes","benz","mb.drive","amg"]}
+];
+const $=id=>document.getElementById(id);let active="all",items=[],query="",sort="new",lastFetch=0;
+const feedQuery='(Apple OR iPhone OR iOS OR KI OR ChatGPT OR OpenAI OR Gemini OR "3D-Druck" OR Bambu OR Prusa OR Programmierung OR Software OR Computer OR Windows OR Robotik OR Roboter OR Mercedes-Benz) when:7d';
+function renderCats(){$("categories").innerHTML=cats.map(c=>`<button class="pill ${active===c.id?"active":""}" data-id="${c.id}">${c.emoji} ${c.name}</button>`).join("");document.querySelectorAll(".pill").forEach(b=>b.onclick=()=>{active=b.dataset.id;renderCats();render()})}
+function safe(s=""){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function categoryFor(item){const t=(item.title+" "+item.description).toLowerCase();for(const c of cats.slice(1)){if(c.terms.some(term=>t.includes(term)))return c}return cats[0]}
+function fmt(d){let x=new Date(d);return isNaN(x)?"Datum unbekannt":new Intl.DateTimeFormat("de-DE",{day:"2-digit",month:"short",year:"numeric"}).format(x)}
+function render(){
+ let list=items.filter(n=>active==="all"||n.category.id===active);
+ if(query){let q=query.toLowerCase();list=list.filter(n=>(n.title+" "+n.description+" "+n.source).toLowerCase().includes(q))}
+ list.sort((a,b)=>sort==="new"?new Date(b.date)-new Date(a.date):new Date(a.date)-new Date(b.date));
+ $("count").textContent=list.length+" Meldungen";$("empty").classList.toggle("hidden",list.length>0);$("cards").innerHTML="";
+ if(!list.length)return;
+ $("cards").innerHTML=list.map(n=>`<article class="card"><div class="cardtop"><span class="tag">${n.category.emoji} ${n.category.name==="Alle News"?"Technik":safe(n.category.name)}</span><time class="date">${fmt(n.date)}</time></div><h3>${safe(n.title)}</h3>${n.description?`<p class="summary">${safe(n.description.slice(0,220))}${n.description.length>220?"…":""}</p>`:""}<div class="cardbottom"><span class="source">${safe(n.source)}</span><a class="link" href="${safe(n.link)}" target="_blank" rel="noopener">Artikel lesen ↗</a></div></article>`).join("");
+}
+async function load(force=false){
+ const cached=localStorage.getItem("tp-news-cache");
+ if(!force&&cached){try{const c=JSON.parse(cached);if(Date.now()-c.time<15*60*1000){items=c.items.map(x=>({...x,category:categoryFor(x)}));$("updated").textContent="Zwischengespeichert · "+new Date(c.time).toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})+" Uhr";render();return}}catch{}}
+ $("cards").innerHTML='<div class="status">⏳ Suche aktuelle Technik-News …</div>';$("notice").classList.add("hidden");$("refresh").disabled=true;
+ try{
+  const rss="https://news.google.com/rss/search?q="+encodeURIComponent(feedQuery)+"&hl=de&gl=DE&ceid=DE:de";
+  const url="https://api.rss2json.com/v1/api.json?rss_url="+encodeURIComponent(rss);
+  const response=await fetch(url);if(!response.ok)throw Error("RSS-Dienst antwortet nicht");
+  const data=await response.json();if(data.status!=="ok")throw Error(data.message||"RSS konnte nicht geladen werden");
+  items=(data.items||[]).map(x=>{let link=x.link||"";let source=(x.author||"Nachrichtenquelle").replace(/<[^>]*>/g,"");let desc=(x.description||"").replace(/<[^>]*>/g," ").replace(/&nbsp;/g," ").replace(/&amp;/g,"&").replace(/\s+/g," ").trim();let obj={title:(x.title||"").trim(),description:desc,link,source,date:x.pubDate||new Date().toISOString()};obj.category=categoryFor(obj);return obj}).filter(x=>x.title&&x.link);
+  localStorage.setItem("tp-news-cache",JSON.stringify({time:Date.now(),items:items.map(x=>({...x,category:undefined}))}));
+  $("updated").textContent="Zuletzt aktualisiert: "+new Date().toLocaleTimeString("de-DE",{hour:"2-digit",minute:"2-digit"})+" Uhr";
+  if(!items.length)throw Error("Der Nachrichtenfeed hat gerade keine Artikel geliefert.");
+  render();
+ }catch(e){
+  if(items.length){render();$("notice").textContent="Aktualisierung gerade nicht möglich. Es werden gespeicherte Meldungen angezeigt."; $("notice").classList.remove("hidden")}
+  else{$("cards").innerHTML="";$("empty").classList.remove("hidden");$("notice").textContent="Nachrichten konnten nicht geladen werden. Der kostenlose RSS-Dienst kann zeitweise begrenzt sein. Versuche es später erneut."; $("notice").classList.remove("hidden")}
+ }finally{$("refresh").disabled=false}
+}
+$("refresh").onclick=()=>load(true);$("search").oninput=e=>{query=e.target.value;render()};$("sort").onchange=e=>{sort=e.target.value;render()};$("topnews").onclick=()=>{active="all";query="";$("search").value="";renderCats();render();window.scrollTo({top:$("cards").offsetTop-90,behavior:"smooth"})};
+renderCats();load();
+if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+</script>
+</body></html>
