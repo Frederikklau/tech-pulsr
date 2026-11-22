@@ -1,0 +1,12 @@
+{
+  "name":"TECH PULSE – Technik-News",
+  "short_name":"TECH PULSE",
+  "description":"Technik-News zu Apple, KI, 3D-Druck, Programmierung, Computer, Robotik und Mercedes.",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#080b14",
+  "theme_color":"#080b14",
+  "orientation":"portrait",
+  "icons":[{"src":"./icon-192.png","sizes":"192x192","type":"image/png"},{"src":"./icon-512.png","sizes":"512x512","type":"image/png"}]
+}
